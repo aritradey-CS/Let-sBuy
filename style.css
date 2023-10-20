@@ -1,28 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&family=Gabarito:wght@400;500;600;700;800;900&family=Heebo:wght@100;200;300;400;500;600;700;800&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;700&family=Raleway:wght@200;400;800;900&display=swap');
 
-:root{
+:root {
     --main-bg-color: #000;
-    --nav-font-color:#ffffff;
+    --nav-font-color: #ffffff;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     width: 100%;
     height: 100%;
 }
-.main{
+
+.main {
     width: 100%;
 }
-.home{
+
+.home {
+    color: var(--nav-font-color);
     height: 100vh;
     width: 100%;
     background-color: var(--main-bg-color);
 }
-.nav{
+
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,29 +37,79 @@ html,body{
     padding: 20px 40px;
     color: var(--nav-font-color);
 }
-.nav a{
+
+.nav a {
     color: var(--nav-font-color);
     text-decoration: none;
     font-size: 1.5vw;
 }
-.nav h4{
+
+.nav h4 {
     font-size: 1.3vw;
 }
-.nav i{
+
+.nav i {
     display: none;
 }
+
 @media (max-width:600px) {
     .nav a {
         font-size: 25px;
         margin-right: 5px;
     }
-    .nav h4{
+
+    .nav h4 {
         display: none;
     }
-    .nav i{
-        display:block;
+
+    .nav i {
+        display: block;
         margin-left: 5px;
         color: var(--nav-font-color);
         font-size: 7.5vw;
+    }
+}
+
+.heading {
+    margin-top: 60px;
+    margin-left: 30px;
+    opacity: .5;
+    line-height: 1;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.heading-top {
+    display: flex;
+}
+
+.heading #thired-headpart {
+    display: none;
+}
+
+.heading h3 {
+    margin-top: 92px;
+    font-size: 2vw;
+}
+
+@media (max-width:600px) {
+    .heading {
+        font-size: 6.5vw;
+    }
+
+    .heading #second-headpart {
+        display: none;
+    }
+
+    .heading h3 {
+        margin-top: 30px;
+        font-size: 3vw;
+    }
+
+    .heading #thired-headpart {
+        display: block;
+
     }
 }
