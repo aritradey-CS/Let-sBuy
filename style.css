@@ -94,6 +94,7 @@ body {
     font-size: 2vw;
 }
 
+
 @media (max-width:600px) {
     .heading {
         font-size: 6.5vw;
