@@ -86,14 +86,14 @@ body {
 }
 .blocktext{
     width: fit-content;
-    background-color: red;
+    
 }
 .blocktext h3{
     margin-top: -10px;
     margin-right: 3px;
     padding-top: 0px;
     font-size: 2vw;
-text-align: right;
+    text-align: right;
 }
 .heading #second-headpart{
     margin-top: 0px;
@@ -101,12 +101,22 @@ text-align: right;
 .heading #thired-headpart {
     display: none;
 }
-
-.heading h3 {
-   
+.child-headings{
+    margin-top: 100px;
+    padding-right: 50px;
 }
-
-
+.child-headings h5{
+    text-transform: uppercase;
+    margin-top: .5vw;
+    font-size: 1vw;
+    text-align: right;
+}
+.ri-scissors-2-line{
+    color: hotpink;
+}
+.ri-home-wifi-line{
+color: yellowgreen;
+}
 @media (max-width:600px) {
     .heading {
         font-size: 6.5vw;
@@ -120,9 +130,28 @@ text-align: right;
         margin-top: 30px;
         font-size: 3vw;
     }
-
+    .blocktext{
+        width: fit-content;
+        
+    }
+    .blocktext h3{
+        margin-top: -5px;
+        margin-right: 3px;
+        padding-top: 0px;
+        font-size: 2vw;
+    text-align: right;
+    }
     .heading #thired-headpart {
         display: block;
 
+    }
+    .child-headings h5{
+        font-size: 2vw; 
+    }
+    .ri-scissors-2-line{
+        color: hotpink;
+    }
+    .ri-home-wifi-line{
+color: yellowgreen;
     }
 }
