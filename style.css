@@ -2,6 +2,7 @@
 
 :root {
     --main-bg-color: #000;
+    --base-bg-color: #888;
     --nav-font-color: #ffffff;
 }
 
@@ -154,4 +155,33 @@ color: yellowgreen;
     .ri-home-wifi-line{
 color: yellowgreen;
     }
+}
+.homefooter{
+    padding: 0 2vw;
+    width: 100%;
+    position: absolute;
+    bottom: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.homefooter a{
+    color: var(--nav-font-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 2px 2px;
+}
+.iconset{
+    display: flex;
+    gap: 5px;
+    font-size: 30px;
+}
+.homefooter .arrow{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 25px;
+height: 25px;
+border-radius: 50%;
+background-color: var(--base-bg-color   );
 }
