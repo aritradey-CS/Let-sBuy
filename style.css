@@ -84,14 +84,26 @@ body {
 .heading-top {
     display: flex;
 }
-
+.blocktext{
+    width: fit-content;
+    background-color: red;
+}
+.blocktext h3{
+    margin-top: -10px;
+    margin-right: 3px;
+    padding-top: 0px;
+    font-size: 2vw;
+text-align: right;
+}
+.heading #second-headpart{
+    margin-top: 0px;
+}
 .heading #thired-headpart {
     display: none;
 }
 
 .heading h3 {
-    margin-top: 92px;
-    font-size: 2vw;
+   
 }
 
 
