@@ -4,6 +4,8 @@
   --main-bg-color: #000;
   --base-bg-color: #888;
   --nav-font-color: #ffffff;
+  --new-bg-color-on-hover:rgb(79, 243, 79);
+--new-text-color-on-hover:rgb(0, 0, 0);
 }
 
 * {
@@ -250,7 +252,53 @@ body {
 .elem img,
 .elem-last img {
     height: 100%;
+    display: none;
     opacity: 0;
     position: absolute;
     z-index: 999;
+}
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 10vw 5vw;
+    padding-left: 30vw;
+    width: 100%;
+    background-color: var(--main-bg-color);
+}
+.imageabout img{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    background-size: cover;
+}    
+.textabout{
+    color: var(--nav-font-color);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+font-size: 1.3vw;
+}
+.textabout button{
+    margin-top: 15px;
+    background-color: var(--main-bg-color);
+    color: var(--nav-font-color);
+    height: 2vw;
+    width: 6vw;
+    font-size: 1vw;
+
+    border: 1px solid var(--nav-font-color);
+    border-radius: 20px;    
+    box-shadow: 0 0 10px rgb(228, 230, 226); /* Added a smooth shadow effect */
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+}
+.textabout button:hover {
+    background-color: var(--new-bg-color-on-hover);
+    color: var(--new-text-color-on-hover);
+    height: 3vw;
+    width: 7vw;
+    font-size: 1.3vw;
+    box-shadow: 0 0 10px yellowgreen; /* Added a smooth shadow effect */
+    border: 1px solid transparent; /* Remove the border on hover, or adjust as needed */
 }
