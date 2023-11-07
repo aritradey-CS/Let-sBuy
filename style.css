@@ -147,8 +147,12 @@ body {
   .heading #thired-headpart {
     display: block;
   }
+  .child-headings {
+    margin-top: 200px;
+    padding-right: 50px;
+  }
   .child-headings h5 {
-    font-size: 2vw;
+    font-size: 4vw;
   }
   .ri-scissors-2-line {
     color: hotpink;
@@ -226,29 +230,30 @@ body {
   text-decoration: none;
   font-size: 2vw;
 }
-/* .elem-last {
-    position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--nav-font-color);
-  color: var(--nav-font-color);
-  width: 100%;
-  padding: 4vw 2vw 4vw 2vw;
-  padding-right: 0;
-  border-top: 1px solid var(--nav-font-color);
-} */
-/* .elem-last h1 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 3vw;
-  opacity: 0.7;
-} */
-/* .elem-last a {
-  text-decoration: none;
-  font-size: 2vw;
-} */
+@media (max-width: 600px) {
+  .second {
+    padding-top: 0px;
+  }
+  .elem,
+  .elem-last {
+    height: 50vw;
+    padding: 0px;
+  }
+  .elem h1,
+  .elem-last h1 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 6vw;
+    opacity: 0.7;
+  }
+  .elem a,
+  .elem-last a {
+    text-decoration: none;
+    font-size: 8vw;
+    /* padding-left: 0px; */
+  }
+}
+
 .elem img,
 .elem-last img {
   height: 100%;
@@ -280,6 +285,14 @@ body {
   font-weight: 100;
   font-size: 1.3vw;
 }
+.textabout h4 {
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+.textabout p {
+  line-height: 1.7;
+}
 .textabout button {
   margin-top: 15px;
   background-color: var(--main-bg-color);
@@ -287,57 +300,187 @@ body {
   height: 2vw;
   width: 6vw;
   font-size: 1vw;
-
+  cursor: pointer;
   border: 1px solid var(--nav-font-color);
   border-radius: 20px;
-  box-shadow: 0 0 10px rgb(228, 230, 226); /* Added a smooth shadow effect */
+  box-shadow: 0 0 10px rgb(228, 230, 226);
   border: 1px solid transparent;
-  transition: background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
+  transform: scale(1);
+  transform-origin: center; /* Keep the button centered during the hover effect */
 }
+
 .textabout button:hover {
   background-color: var(--new-bg-color-on-hover);
   color: var(--new-text-color-on-hover);
   height: 3vw;
   width: 7vw;
   font-size: 1.3vw;
-  box-shadow: 0 0 10px yellowgreen; /* Added a smooth shadow effect */
-  border: 1px solid transparent; /* Remove the border on hover, or adjust as needed */
+  transform: scale(1); /* Reset the transform property on hover */
 }
+
 @media (max-width: 600px) {
   .about {
-    flex-direction: column; /* Change to column layout for smaller screens */
-    padding-left: 0; /* Reset the left padding */
+    flex-direction: column;
+    padding-left: 0;
     align-items: center;
     gap: 20px;
   }
 
   .imageabout img {
-    width: 40vw; /* Adjust the image size for smaller screens */
+    width: 40vw;
     height: 40vw;
   }
 
   .textabout {
-    font-size: 5vw;
+    font-size: 4vw;
     width: 80vw;
-    align-items: center;
-    flex-direction: column;
     font-weight: 400;
   }
+
+  .textabout h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center-align h4 text */
+  }
+
   .textabout button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30vw;
     height: 10vw;
     width: 25vw;
     font-size: 4vw;
     border: 1px solid var(--nav-font-color);
     border-radius: 20px;
-    box-shadow: 0 0 10px rgb(228, 230, 226); /* Added a smooth shadow effect */
+    box-shadow: 0 0 10px rgb(228, 230, 226);
     border: 1px solid transparent;
-    transition: background-color 0.3s;
+    transition: all 0.3s; /* Use 'all' to transition all properties */
   }
+
   .textabout button:hover {
+    margin-left: 30vw;
     height: 10vw;
     width: 25vw;
     font-size: 4vw;
-    box-shadow: 0 0 10px yellowgreen; /* Added a smooth shadow effect */
-    border: 1px solid transparent; /* Remove the border on hover, or adjust as needed */
+    box-shadow: 0 0 10px yellowgreen;
+    border: 1px solid transparent;
+  }
+}
+.subscribe {
+  color: var(--nav-font-color);
+  padding: 20px 30px 5vw;
+  background-color: var(--main-bg-color);
+}
+.subscribe h3 {
+  opacity: 0.6;
+  padding: 0px 0px 5px 0px;
+}
+.subscribe h3 > i {
+  color: rgb(255, 255, 0);
+  padding-right: 5px;
+}
+.subscribe h4 {
+  text-transform: uppercase;
+  font-size: 0.9vw;
+  cursor: pointer;
+ 
+}
+.subscribe h4 > i {
+  font-size: 1.3vw;
+  padding-left: 5px;
+  color: blueviolet;
+}
+.subscribe h5 {
+  display: none;
+}
+.footer {
+  width: 100%;
+  background-color: var(--main-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+.footerleft {
+  color: var(--nav-font-color);
+  text-decoration: none;
+  display: flex;
+  gap: 20px;
+}
+.footerright {
+  text-decoration: none;
+  display: flex;
+  gap: 20px;
+}
+.footerright a {
+  text-decoration: none;
+  color: var(--nav-font-color);
+}
+.footerright a:nth-child(1) {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); 
+  cursor:pointer
+}
+
+.footerright a:nth-child(2) {
+  color: blue;
+  text-shadow: 2px 2px 4px rgba(40, 32, 151, 0.5);  
+  cursor:pointer
+}
+
+.footerright a:nth-child(3) {
+  color: #404eed;
+  text-shadow: 2px 2px 4px rgba(94, 94, 153, 0.5); 
+  cursor:pointer
+}
+
+.footerright a:nth-child(4) {
+  color: purple;
+  text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.5); 
+  cursor:pointer
+}
+
+
+.footersubright {
+  display: none;
+}
+@media (max-width: 600px) {
+  .subscribe h3,
+  .subscribe h4 {
+    display: none;
+  }
+
+  .subscribe h5 {
+    display: flex;
+    align-items: center; /* Align items vertically in the middle */
+  }
+
+  .subscribe h5 > img {
+    height: 4vw;
+    width: 4vw;
+    margin-right: 10px; /* Add some margin for spacing between text and image */
+  }
+
+  .footer {
+    font-size: 3.5vw;
+  }
+  .footerright {
+    display: none;
+  }
+  .footersubright a {
+    text-decoration: none;
+    color: var(--nav-font-color);
+  }
+  .footersubright {
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
+  }
+  .footersubright img {
+    height: 5vw;
+    width: 5vw;
   }
 }
