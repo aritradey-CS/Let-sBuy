@@ -4,8 +4,8 @@
   --main-bg-color: #000;
   --base-bg-color: #888;
   --nav-font-color: #ffffff;
-  --new-bg-color-on-hover:rgb(79, 243, 79);
---new-text-color-on-hover:rgb(0, 0, 0);
+  --new-bg-color-on-hover: rgb(79, 243, 79);
+  --new-text-color-on-hover: rgb(0, 0, 0);
 }
 
 * {
@@ -193,7 +193,7 @@ body {
   }
 }
 .second {
-    padding-left: 3vw;
+  padding-left: 3vw;
   padding-right: 3vw;
   padding-top: 100px;
   background-color: var(--main-bg-color);
@@ -202,16 +202,16 @@ body {
 }
 .elem,
 .elem-last {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--nav-font-color);
-    color: var(--nav-font-color);
-    width: 100%;
-    padding: 4vw 2vw 4vw 2vw;
-    padding-right: 0;
-    border-top: 1px solid var(--nav-font-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--nav-font-color);
+  color: var(--nav-font-color);
+  width: 100%;
+  padding: 4vw 2vw 4vw 2vw;
+  padding-right: 0;
+  border-top: 1px solid var(--nav-font-color);
 }
 .elem h1,
 .elem-last h1 {
@@ -251,54 +251,93 @@ body {
 } */
 .elem img,
 .elem-last img {
-    height: 100%;
-    display: none;
-    opacity: 0;
-    position: absolute;
-    z-index: 999;
+  height: 100%;
+  display: none;
+  opacity: 0;
+  position: absolute;
+  z-index: 999;
 }
-.about{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    padding: 10vw 5vw;
-    padding-left: 30vw;
-    width: 100%;
-    background-color: var(--main-bg-color);
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 10vw 5vw;
+  padding-left: 30vw;
+  width: 100%;
+  background-color: var(--main-bg-color);
 }
-.imageabout img{
-    width: 20vw;
-    height: 20vw;
-    border-radius: 50%;
-    background-size: cover;
-}    
-.textabout{
-    color: var(--nav-font-color);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-font-size: 1.3vw;
+.imageabout img {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  background-size: cover;
 }
-.textabout button{
-    margin-top: 15px;
-    background-color: var(--main-bg-color);
-    color: var(--nav-font-color);
-    height: 2vw;
-    width: 6vw;
-    font-size: 1vw;
+.textabout {
+  width: 35rem;
+  color: var(--nav-font-color);
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  font-size: 1.3vw;
+}
+.textabout button {
+  margin-top: 15px;
+  background-color: var(--main-bg-color);
+  color: var(--nav-font-color);
+  height: 2vw;
+  width: 6vw;
+  font-size: 1vw;
 
+  border: 1px solid var(--nav-font-color);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(228, 230, 226); /* Added a smooth shadow effect */
+  border: 1px solid transparent;
+  transition: background-color 0.3s;
+}
+.textabout button:hover {
+  background-color: var(--new-bg-color-on-hover);
+  color: var(--new-text-color-on-hover);
+  height: 3vw;
+  width: 7vw;
+  font-size: 1.3vw;
+  box-shadow: 0 0 10px yellowgreen; /* Added a smooth shadow effect */
+  border: 1px solid transparent; /* Remove the border on hover, or adjust as needed */
+}
+@media (max-width: 600px) {
+  .about {
+    flex-direction: column; /* Change to column layout for smaller screens */
+    padding-left: 0; /* Reset the left padding */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .imageabout img {
+    width: 40vw; /* Adjust the image size for smaller screens */
+    height: 40vw;
+  }
+
+  .textabout {
+    font-size: 5vw;
+    width: 80vw;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 400;
+  }
+  .textabout button {
+    height: 10vw;
+    width: 25vw;
+    font-size: 4vw;
     border: 1px solid var(--nav-font-color);
-    border-radius: 20px;    
+    border-radius: 20px;
     box-shadow: 0 0 10px rgb(228, 230, 226); /* Added a smooth shadow effect */
     border: 1px solid transparent;
     transition: background-color 0.3s;
-}
-.textabout button:hover {
-    background-color: var(--new-bg-color-on-hover);
-    color: var(--new-text-color-on-hover);
-    height: 3vw;
-    width: 7vw;
-    font-size: 1.3vw;
+  }
+  .textabout button:hover {
+    height: 10vw;
+    width: 25vw;
+    font-size: 4vw;
     box-shadow: 0 0 10px yellowgreen; /* Added a smooth shadow effect */
     border: 1px solid transparent; /* Remove the border on hover, or adjust as needed */
+  }
 }
