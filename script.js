@@ -1,3 +1,13 @@
+function mousemove () {
+  var crsr = document.querySelector("#cursor");
+document.addEventListener("mousemove", function (dets) {
+  crsr.style.left = dets.x + 15 + "px";
+  crsr.style.top = dets.y + 15 + "px";
+  });
+
+}
+mousemove();
+
 function loco() {
   gsap.registerPlugin(ScrollTrigger);
 
