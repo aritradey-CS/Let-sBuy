@@ -8,6 +8,49 @@ document.addEventListener("mousemove", function (dets) {
 }
 mousemove();
 
+
+function firstPageAnim(){
+  var tl = gsap.timeline();
+
+  tl.from(".nav",{
+    y:'-10',
+    opacity:0,
+    duration:1.5,
+    ease:Expo.easeInOut
+  })
+  
+  .to("#first-headpart",{
+    y:'0',
+    ease:Expo.easeInOut,
+    duration:1.5,
+    delay: -1,
+    stagger: .2
+  })
+  .to(".bounding h3",{
+    y:'0',
+    ease:Expo.easeInOut,
+    duration:1.5,
+    delay: -1,
+    stagger: .2
+  })
+  .to("#second-headpart",{
+    y:'0',
+    ease:Expo.easeInOut,
+    duration:1.5,
+    delay: -1,
+    stagger: .2
+  })
+  .to("#child-h5",{
+    y:'0',
+    ease:Expo.easeInOut,
+    duration:1.5,
+    delay: -1,
+    stagger: .2
+  })
+}
+
+firstPageAnim ();
+
 function loco() {
   gsap.registerPlugin(ScrollTrigger);
 
