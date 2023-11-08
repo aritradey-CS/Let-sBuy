@@ -29,6 +29,11 @@ body {
   position: fixed;
   z-index: 99;
 }
+@media (max-width:600px) {
+  #cursor{
+    display: none;
+  }
+}
 .main {
   background-color: var(--main-bg-color);
   width: 100%;
@@ -296,8 +301,8 @@ body {
 .elem img,
 .elem-last img {
   height: 100%;
-  display: none;
-  opacity: 0;
+  opacity: 0; 
+  transition: opacity 0.3s; 
   position: absolute;
   z-index: 999;
 }
