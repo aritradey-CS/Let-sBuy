@@ -67,7 +67,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  .home{
+  .home {
     height: 70vh;
     margin-bottom: 100px;
   }
@@ -104,26 +104,25 @@ body {
 }
 .blocktext {
   display: flex;
-    flex-direction: column;
-    align-items: end;
-    width: fit-content;
+  flex-direction: column;
+  align-items: end;
+  width: fit-content;
 }
-.bounding{
+.bounding {
   width: fit-content;
   /* background-color: red; */
   overflow: hidden;
 }
-.bounding #first-headpart{
+.bounding #first-headpart {
   transform: translateY(100%);
 }
 .bounding h3 {
   margin-top: -3px;
-    margin-right: 2px;
+  margin-right: 2px;
   padding-top: 0px;
   font-size: 2vw;
   text-align: right;
   transform: translateY(100%);
-
 }
 .heading #second-headpart {
   margin-top: 0px;
@@ -132,21 +131,21 @@ body {
 .heading #thired-headpart {
   display: none;
 }
-.child-headings{
+.child-headings {
   display: flex;
-    flex-direction: column;
-    align-items: end;
-    margin-top: 100px;
-    padding-right: 50px;
-    overflow: hidden;;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 100px;
+  padding-right: 50px;
+  overflow: hidden;
 }
-#child-h5{
+#child-h5 {
   text-transform: uppercase;
   margin-top: 0.5vw;
   font-size: 1vw;
   text-align: right;
   transform: translateY(100%);
-  }
+}
 /* .bounding .h5{
   text-transform: uppercase;
   margin-top: 0.5vw;
@@ -296,7 +295,6 @@ body {
 
 .elem img,
 .elem-last img {
-  
   height: 100%;
   display: none;
   opacity: 0;
@@ -357,7 +355,7 @@ body {
   height: 3vw;
   width: 7vw;
   font-size: 1.3vw;
-  transform: scale(1); 
+  transform: scale(1);
 }
 
 @media (max-width: 600px) {
@@ -416,7 +414,6 @@ body {
   }
 }
 
-
 .subscribe {
   color: var(--nav-font-color);
   padding: 20px 30px 5vw;
@@ -434,7 +431,6 @@ body {
   text-transform: uppercase;
   font-size: 0.9vw;
   cursor: pointer;
- 
 }
 .subscribe h4 > i {
   font-size: 1.3vw;
@@ -469,28 +465,27 @@ body {
 }
 .footerright a:nth-child(1) {
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); 
-  cursor:pointer
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 
 .footerright a:nth-child(2) {
   color: blue;
-  text-shadow: 2px 2px 4px rgba(40, 32, 151, 0.5);  
-  cursor:pointer
+  text-shadow: 2px 2px 4px rgba(40, 32, 151, 0.5);
+  cursor: pointer;
 }
 
 .footerright a:nth-child(3) {
   color: #404eed;
-  text-shadow: 2px 2px 4px rgba(94, 94, 153, 0.5); 
-  cursor:pointer
+  text-shadow: 2px 2px 4px rgba(94, 94, 153, 0.5);
+  cursor: pointer;
 }
 
 .footerright a:nth-child(4) {
   color: purple;
-  text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.5); 
-  cursor:pointer
+  text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.5);
+  cursor: pointer;
 }
-
 
 .footersubright {
   display: none;

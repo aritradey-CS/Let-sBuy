@@ -1,55 +1,74 @@
-function mousemove () {
+function mousemove() {
   var crsr = document.querySelector("#cursor");
-document.addEventListener("mousemove", function (dets) {
-  crsr.style.left = dets.x + 15 + "px";
-  crsr.style.top = dets.y + 15 + "px";
+  document.addEventListener("mousemove", function (dets) {
+    crsr.style.left = dets.x + 15 + "px";
+    crsr.style.top = dets.y + 15 + "px";
   });
-
 }
 mousemove();
 
+function circlesquize(){
+  //defining default scale value
+  var xscale = 1;
+  var yscale = 1;
 
-function firstPageAnim(){
-  var tl = gsap.timeline();
+  var xprev = 0;
+  var yprev = 0;
 
-  tl.from(".nav",{
-    y:'-10',
-    opacity:0,
-    duration:1.5,
-    ease:Expo.easeInOut
-  })
-  
-  .to("#first-headpart",{
-    y:'0',
-    ease:Expo.easeInOut,
-    duration:1.5,
-    delay: -1,
-    stagger: .2
-  })
-  .to(".bounding h3",{
-    y:'0',
-    ease:Expo.easeInOut,
-    duration:1.5,
-    delay: -1,
-    stagger: .2
-  })
-  .to("#second-headpart",{
-    y:'0',
-    ease:Expo.easeInOut,
-    duration:1.5,
-    delay: -1,
-    stagger: .2
-  })
-  .to("#child-h5",{
-    y:'0',
-    ease:Expo.easeInOut,
-    duration:1.5,
-    delay: -1,
-    stagger: .2
+  window.addEventListener("mousemove", function(dets){
+
+    var xdiff = dets.clientX - xprev;
+    var ydiff = dets.clientY - yprev;
+
+    xprev = dets.clientX;
+    yprev = dets.clientY;
+
+    console.log(xdiff, ydiff);
   })
 }
+circlesquize();
 
-firstPageAnim ();
+function firstPageAnim() {
+  var tl = gsap.timeline();
+
+  tl.from(".nav", {
+    y: "-10",
+    opacity: 0,
+    duration: 1.5,
+    ease: Expo.easeInOut,
+  })
+
+    .to("#first-headpart", {
+      y: "0",
+      ease: Expo.easeInOut,
+      duration: 1.5,
+      delay: -1,
+      stagger: 0.2,
+    })
+    .to(".bounding h3", {
+      y: "0",
+      ease: Expo.easeInOut,
+      duration: 1.5,
+      delay: -1,
+      stagger: 0.2,
+    })
+    .to("#second-headpart", {
+      y: "0",
+      ease: Expo.easeInOut,
+      duration: 1.5,
+      delay: -1,
+      stagger: 0.2,
+    })
+    .to("#child-h5", {
+      y: "0",
+      ease: Expo.easeInOut,
+      duration: 1.5,
+      delay: -1,
+      stagger: 0.2,
+    });
+}
+
+firstPageAnim();
 
 function loco() {
   gsap.registerPlugin(ScrollTrigger);
