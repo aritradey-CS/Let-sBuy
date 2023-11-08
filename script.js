@@ -1,4 +1,27 @@
-function mousemove() {
+
+function circlesquize(){
+  //defining default scale value
+  var xscale = 1;
+  var yscale = 1;
+  
+  var xprev = 0;
+  var yprev = 0;
+  
+  window.addEventListener("mousemove", function(dets){
+    
+    xscale = gsap.utils.clamp(.8,1.2, dets.clientX - xprev)
+    yscale = gsap.utils.clamp(.8,1.2, dets.clientY - yprev)
+    
+    xprev = dets.clientX;
+    yprev = dets.clientY;
+    
+    mousemove(xscale, yscale);
+  })
+}
+circlesquize();
+
+
+function mousemove(xscale, yscale) {
   var crsr = document.querySelector("#cursor");
   document.addEventListener("mousemove", function (dets) {
     crsr.style.left = dets.x + 15 + "px";
@@ -6,27 +29,6 @@ function mousemove() {
   });
 }
 mousemove();
-
-function circlesquize(){
-  //defining default scale value
-  var xscale = 1;
-  var yscale = 1;
-
-  var xprev = 0;
-  var yprev = 0;
-
-  window.addEventListener("mousemove", function(dets){
-
-    var xdiff = dets.clientX - xprev;
-    var ydiff = dets.clientY - yprev;
-
-    xprev = dets.clientX;
-    yprev = dets.clientY;
-
-    console.log(xdiff, ydiff);
-  })
-}
-circlesquize();
 
 function firstPageAnim() {
   var tl = gsap.timeline();
