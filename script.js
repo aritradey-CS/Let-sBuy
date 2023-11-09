@@ -120,33 +120,71 @@ firstPageAnim();
 // }
 // loco();
 
+// document.querySelectorAll(".elem").forEach(function (elem) {
+//   elem.addEventListener("mouseenter", function () {
+//     gsap.to(elem.querySelector("img"), {
+//       opacity: 1,
+//       ease: "power1.inOut",
+//     });
+//   });
+
+//   elem.addEventListener("mouseleave", function () {
+//     gsap.to(elem.querySelector("img"), {
+//       opacity: 0,
+//       ease: "power1.inOut",
+//     });
+//   });
+// });
+// document.querySelectorAll(".elem-last").forEach(function (elem) {
+//   elem.addEventListener("mousemove", function (details) {
+//     gsap.to(elem.querySelector("img"), {
+//       opacity: 1,
+//       ease:Power1.inOut,
+//     });  
+//   });
+//   elem.addEventListener("mouseleave", function () {
+//     gsap.to(elem.querySelector("img"), {
+//       opacity: 0,
+//       ease: "power1.inOut",
+//     });
+//   });
+// });
+
+// document.querySelectorAll("mousemove", function (dets) {
+//   var diff = dets.clientX - Element.getBoundingClientReact().top;
+//   diffrot = dets.clientX - rotate;
+//   rotate = dets.clientX;
+//   gsap.to(elem.querySelector("img"),{
+//     opacity: 1,
+//     ease: power1,
+//     top: diff,
+//     left: dets.clientX,
+//     rotate : gsap.utils.clamp(-20, 20, diffrot * 0.5),
+//   }); 
+//   });
+
 document.querySelectorAll(".elem").forEach(function (elem) {
-  elem.addEventListener("mouseenter", function () {
+  var rotate = 0;
+  var diffrot = 0;
+
+  elem.addEventListener("mouseleave", function (dets) {
     gsap.to(elem.querySelector("img"), {
-      opacity: 1,
-      ease: "power1.inOut",
+      opacity: 0,
+      ease: Power3,
+      duration: 0.5,
     });
   });
 
-  elem.addEventListener("mouseleave", function () {
-    gsap.to(elem.querySelector("img"), {
-      opacity: 0,
-      ease: "power1.inOut",
-    });
-  });
-});
-document.querySelectorAll(".elem-last").forEach(function (elem) {
-  elem.addEventListener("mousemove", function (details) {
+  elem.addEventListener("mousemove", function (dets) {
+    var diff = dets.clientY - elem.getBoundingClientRect().top;
+    diffrot = dets.clientX - rotate;
+    rotate = dets.clientX;
     gsap.to(elem.querySelector("img"), {
       opacity: 1,
-      ease:Power1.inOut,
-    });  
-  });
-  elem.addEventListener("mouseleave", function () {
-    gsap.to(elem.querySelector("img"), {
-      opacity: 0,
-      ease: "power1.inOut",
+      ease: Power3,
+      top: diff,
+      left: dets.clientX,
+      rotate: gsap.utils.clamp(-20, 20, diffrot * 0.5),
     });
   });
 });
-
