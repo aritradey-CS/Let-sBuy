@@ -42,7 +42,7 @@ body {
 .home {
   position: relative;
   color: var(--nav-font-color);
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   background-color: var(--main-bg-color);
 }
@@ -195,8 +195,8 @@ body {
     margin-top: 200px;
     padding-right: 50px;
   }
-  .child-headings h5 {
-    font-size: 4vw;
+  #child-h5 {
+    font-size: 3.5vw;
   }
   .ri-scissors-2-line {
     color: hotpink;
@@ -365,7 +365,7 @@ body {
 
 @media (max-width: 600px) {
   .about {
-    margin: -30px 0px 0px 0px;
+    margin: 15rem 0px 0px 0px;
     flex-direction: column;
     padding-left: 0;
     align-items: center;
