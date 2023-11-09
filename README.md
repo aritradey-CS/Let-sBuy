@@ -31,7 +31,7 @@ Welcome to Let'sBuy, a modern and dynamic web experience that seamlessly blends 
 
 6. **GitHub & Social Media Integration:**
    - Connect with us on GitHub, LinkedIn, Discord, and Twitch effortlessly through integrated social media links.
-![Uploading image.png…]()
+![image](https://github.com/aritradey-CS/Let-sBuy/assets/81703791/d39a344b-9e39-461c-80fb-d932b1e3843e)
 
 ### How to Use:
 
