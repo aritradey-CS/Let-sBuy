@@ -31,6 +31,7 @@ Welcome to Let'sBuy, a modern and dynamic web experience that seamlessly blends 
 
 6. **GitHub & Social Media Integration:**
    - Connect with us on GitHub, LinkedIn, Discord, and Twitch effortlessly through integrated social media links.
+![Uploading image.png…]()
 
 ### How to Use:
 
